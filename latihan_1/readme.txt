@@ -1,2 +1,4 @@
-Tambahkan file dengan nama file npm_nama_lengkap.txt pada folder ini.
-lakukan dengan tahapan git yang sesuai. tidak di upload langsung di github.
+Nama : Muggy Soewarman
+NPM  : 5520124017
+
+rencana dalam 5 tahun mendatang :  Saya sangat tertarik dalam dunia teknologi dan saya ingin menjadi seorang it yang hebat dan bermanfaat bagi negara dan masyarakat indonesia, serta ingin mencitptakan banyak lapangan pekerjaan yang banyak.
