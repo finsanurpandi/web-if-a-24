@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <style>
+        p {
+            color:red;
+        }
+
+        /* ID Selector tanda tagar 3 */
+        #para {
+
+        }
+
+        /* Class selector menggunakan tanda titik */
+        .para {
+
+        }
+
+        p#para {
+
+        }
+
+        /* child combinator */
+        div > div > div > div > div > div > div > p {
+
+        }
+
+        a, a:link, a:visited {
+            text-decoration: none;
+            background-color: cornflowerblue;
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        a:hover {
+            background-color: yellow;
+            color: #000000;
+        }
+
+        a:active {
+            background-color: indigo;
+            color: rgb(150, 110, 20);
+        }
+
+        /* body {
+            background-color: red;;
+        } */
+        p {
+            background-color: rgba(150, 110, 20, 0.8);
+            margin-left: 50px;
+            padding-left: 20px;
+        }
+
+        .box1 {
+            display: box;
+            /* background-color: magenta; */
+            background: -webkit-linear-gradient(left top, red, blue, green, yellow, magenta);
+            width: 250px;
+            height: 250px;
+        }
+
+        .box2 {
+            display: box;
+            /* background-color: magenta; */
+            background: -webkit-radial-gradient(red, blue, green, yellow, magenta);
+            width: 250px;
+            height: 250px;
+        }
+
+        @keyframes animasi {
+            0% { left: 0px; top:0px; border-radius: 0px;}
+            25% { left: 150px; top:0px; border-radius: 50px;}
+            50% { left: 150px; top:150px; border-radius: 0px;}
+            75% { left: 0px; top:150px; border-radius: 50px;}
+            100% { left: 0px; top:0px; border-radius: 0px;}
+        }
+
+        .box {
+            display: box;
+            position: relative;
+            background-color: magenta;
+            width: 50px;
+            height: 50px;
+
+            /* animasi */
+            animation-name: animasi;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: reverse;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello</h1>
+    <p class="para" style="font-weight: bold;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda exercitationem fuga porro ut possimus similique cum natus doloremque neque ea, qui veniam facilis vero? Perferendis ab sequi voluptate nam ea.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus saepe impedit fuga natus architecto, labore veritatis, dolorum facere, dolor iste nisi facilis eum in velit sint rerum voluptates? Numquam, inventore.</p>
+
+    <em>text empashized</em>
+<br/><br/><br/>
+
+    <a href="#">TOMBOL</a>
+
+    <div>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <p>Hello</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <br/><br/>
+    <div class="box"></div>
+    <br/>
+    <br/><br/><br/><br/><br/><br/><br/>
+</body>
+</html>

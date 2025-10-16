@@ -112,7 +112,89 @@
             <td>x</td>
         </tr>
     </table>
-
+    <br/><br/>
+    <h3>FORM</h3>
+    <form action="#" method="GET" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td><label for="nama">Nama</label></td>    
+                <td>:</td>    
+                <td><input type="text" name="nama" id="nama" placeholder="Nama Lengkap" required/></td>
+            </tr>
+            <tr>
+                <td><label for="pass">Password</label></td>
+                <td>:</td>    
+                <td><input type="password" name="password" id="pass" required/></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td>:</td>    
+                <td><input type="email" name="email" id="email" required/></td>
+            </tr>
+            <tr>
+                <td><label for="no_hp">No HP</label></td>
+                <td>:</td>    
+                <td><input type="number" name="no_hp" id="no_hp" required/></td>
+            </tr>
+            <tr>
+                <td><label for="tl">Tanggal Lahir</label></td>
+                <td>:</td>    
+                <td><input type="date" name="tanggal_lahir" id="tl" required/></td>
+            </tr>
+            <tr>
+                <td><label for="wl">Waktu Lahir</label></td>
+                <td>:</td>    
+                <td><input type="time" name="waktu_lahir" id="wl" required/></td>
+            </tr>
+            <tr>
+                <td><label for="address">Alamat</label></td>
+                <td>:</td>    
+                <td><textarea name="address" id="address" rows="5" required></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="jenis_kelamin">Jenis Kelamin</label></td>
+                <td>:</td>    
+                <td>
+                    <input type="radio" name="jenis_kelamin" id="jenis_kelamin" value="L"/>Pria<br/>
+                    <input type="radio" name="jenis_kelamin" id="jenis_kelamin" value="W"/>Wanita
+                </td>
+            </tr>
+            <tr>
+                <td><label for="hobbies">Hobi</label></td>
+                <td>:</td>    
+                <td>
+                    <input type="checkbox" name="hobbies" id="hobbies" value="Olahraga"/>Olahraga<br/>
+                    <input type="checkbox" name="hobbies" id="hobbies" value="music"/>Bermain Musik<br/>
+                    <input type="checkbox" name="hobbies" id="hobbies" value="traveling"/>Traveling
+                </td>
+            </tr>
+            <tr>
+                <td><label for="department">Program Studi</label></td>
+                <td>:</td> 
+                <td>
+                    <select id="department" name="department" required>
+                        <option></option>
+                        <option value="55201">Teknik Informatika</option>
+                        <option value="26201">Teknik Industri</option>
+                        <option value="22201">Teknik Sipil</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="photo">Photo</label></td>
+                <td>:</td>    
+                <td><input type="file" name="photo" id="photo" accept="application/pdf, image/*"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <input type="submit" name="SUBMIT"/>
+                    <input type="reset" name="RESET"/>
+                </td>
+            </tr>
+        </table>
+    </form>
     <br/><br/><br/><br/><br/><br/>
 </body>
 </html>
