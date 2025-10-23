@@ -94,9 +94,109 @@
             animation-iteration-count: infinite;
             animation-direction: reverse;
         }
+
+        .container {
+            display: flex;
+            background-color: aquamarine;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            height: 200px;
+            /* align-content: space-between; */
+        }
+
+        .container div {
+            background-color: magenta;
+            color: #fff;
+            margin: 10px;
+            padding: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            background-color: magenta;
+            gap: 10px;
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            grid-auto-rows: minmax(100px, auto);
+            grid-template-areas:
+                'header header header'
+                /* 'sidebar sidebar sidebar' */
+                'main main main'
+                'right right right'
+                'footer footer footer';
+        }
+
+        .grid-container div {
+            background-color: aquamarine;
+            /* padding: 10px; */
+            /* width: 40px; */
+        }
+
+        /* .item1 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        .item2 {
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+
+        .item3 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+
+        .item4 {
+            grid-column-start: 3;
+            grid-column-end: 4;
+        }
+
+        .item5 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        } */
+
+        .item1 {
+            grid-area: header;
+        }
+
+        .item2 {
+            /* grid-area: sidebar; */
+            display: none;
+        }
+
+        .item3 {
+            grid-area: main;
+        }
+
+        .item4 {
+            grid-area: right;
+        }
+
+        .item5 {
+            grid-area: footer;
+        }
+
+        @media only screen and (min-width: 600px) {
+            .grid-container {
+                grid-template-areas:
+                    'header header header'
+                    'sidebar main main'
+                    'sidebar . right'
+                    'footer footer footer';
+            }
+
+            .item2 {
+                display: grid;
+                grid-area: sidebar;
+            }     
+        }
+
     </style>
 </head>
 <body>
+    <div>
     <h1>Hello</h1>
     <p class="para" style="font-weight: bold;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda exercitationem fuga porro ut possimus similique cum natus doloremque neque ea, qui veniam facilis vero? Perferendis ab sequi voluptate nam ea.</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus saepe impedit fuga natus architecto, labore veritatis, dolorum facere, dolor iste nisi facilis eum in velit sint rerum voluptates? Numquam, inventore.</p>
@@ -128,5 +228,24 @@
     <div class="box"></div>
     <br/>
     <br/><br/><br/><br/><br/><br/><br/>
+    </div>
+    <img src="image.jpg" style="width: 100vw;"/>
+    <br/><br/>
+    <div class="container">
+        <div style="order: 4;flex-grow:1;">1</div>
+        <div style="order: 2;flex-grow:3; align-self: flex-start;">2</div>
+        <div style="order: 1;flex-grow:1; align-self: flex-end;">3</div>
+        <div style="order: 3;flex-grow:6;">4</div>
+    </div>
+    <br/><br/>
+    <div class="grid-container">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+    </div>
+
+    <br/><br/>
 </body>
 </html>
