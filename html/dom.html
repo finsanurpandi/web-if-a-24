@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo" title="Document Object Model">DEMO</p>
+    <div id="div1">
+        <p id="p1">This is Paragraph</p>
+        <p id="p2">This is Another Paragraph</p>
+    </div>
+    <button type="button" onclick="addPara(this)">Add Paragraph</button>
+
+    <h1 onclick="this.innerHTML='Oopps!'">Ini adalah teks paragraph heading 1</h1>
+
+    <h1 onclick="changeText(this)">Ini adalah teks paragraph heading 1</h1>
+
+    <input type="password" id="pass"/>
+    <button type="button" onclick="hideShow()">SHOW</button>
+    <input type="text" max="160" onkeyup="countString(this)" value=""/>
+    <span id="totalString"></span>
+    <script>
+        function hideShow() {
+            let pass = document.getElementById('pass');
+
+            if(pass.type == 'text') {
+                pass.type = 'password';
+                this.innerHTML = 'SHOW';
+            } else {
+                pass.type = 'text';
+                this.innerHTML = 'HIDE';
+            }
+        }
+
+        function countString(id) {
+            document.getElementById('totalString').innerHTML = id.value.length;
+
+            if(id.value.length == 0) {
+                document.getElementById('totalString').innerHTML = '';
+            }
+        }
+
+        function changeText(id) {
+            id.innerHTML = 'Perubahan Teks';
+        }
+
+        function addPara(id) {
+            let para = document.createElement('p');
+            let node = document.createTextNode('This is new Paragraph');
+            para.appendChild(node);
+
+            let element = document.getElementById('div1');
+        
+            element.appendChild(para);
+        }
+        // Create Element
+        // let para = document.createElement('p');
+        // para.style.color = 'red';
+
+        // let node = document.createTextNode('This is new Paragraph');
+        // para.appendChild(node);
+        // para.innerHTML = 'This is overide paragraph';
+        
+
+        // let element = document.getElementById('div1');
+        // let child = document.getElementById('p2');
+        // element.insertBefore(para, child);
+        // element.replaceChild(para, child);
+        // element.removeChild(child);
+
+        let demo = document.getElementById('demo');
+        demo.innerHTML = 'Ini adalah percobaan DOM';
+        demo.style.color = 'red';
+        demo.style.fontWeight = 'bold';
+        demo.setAttribute('class', 'demo');
+        console.log(demo.title);
+        demo.onclick = function() {
+            console.log('Hello...');
+            alert('Hello...');
+        }
+    </script>
+</body>
+</html>
